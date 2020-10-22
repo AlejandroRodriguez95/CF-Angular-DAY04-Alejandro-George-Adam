@@ -1,12 +1,12 @@
 <div class="card-deck">
-    <div *ngFor="let x of poster" class="card col-3">
-        <img class="card-img-top" src="{{x.image}}" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Poster: {{x.name}}</h5>
-          <p class="card-text">{{x.text}}</p>
-        </div>
-        <div class="card-footer">
-          <small class="text-muted">{{x.date}}</small>
-        </div>
-      </div>
+  <div *ngFor="let x of poster" class="card" [routerLink]="['/post', x.name]">
+    <img class="card-img-top" src="{{x.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Poster: {{x.name}}</h5>
+      <p class="card-text">{{x.text}}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{x.date}}</small>
+    </div>
+  </div>
 </div>
